@@ -30,10 +30,6 @@ void HID_Charmap::findChars(String str, int _delay=5){
   int _x = 0;
   int _y = 0;
   
-  // Destination
-  int _goX = 0;
-  int _goY = 0;
-  
   const char charMap[5][20] = {  
     {'!','"','#','$','%','&','\'','(',')','*','+',',','-','.','/','0','1','2','3','4'},
     {'5','6','7','8','9',':',';','<','=','>','?','@','A','B','C','D','E','F','G','H'},
@@ -48,6 +44,11 @@ void HID_Charmap::findChars(String str, int _delay=5){
     //Search only for chars that you can't type (Numbers,z,y) and don't add already pasted ones
     if(_clipboard.indexOf(str[i]) < 0){
       if( !isalpha(str[i]) || tolower(str[i]) == 'y' || tolower(str[i]) == 'z' ){
+      
+        // Destination
+        int _goX = -1;
+        int _goY = -1;
+  
         //Find position of char by 2D array
         for(int jj = 0; jj < 5; jj++){
           for(int kk = 0; kk < 20; kk++){
@@ -57,6 +58,9 @@ void HID_Charmap::findChars(String str, int _delay=5){
             }
           }
         }
+        //if there is no occurrence
+        if(_goX == -1) continue;
+        
         //Calculate steps
         int _timesX = (_x - _goX);
         int _timesY = (_y - _goY);
