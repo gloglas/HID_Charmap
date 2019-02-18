@@ -23,15 +23,15 @@ class HID_Charmap
     
     // Open charmap  
     //           Set font, Wait x millisecs after GUI+r, Delay after GUI+r
-    void open(String _font="aaa", int _windowDelay=700, int _guiDelay=300);
+    void open(String _font="Arial", int _windowDelay=700, int _guiDelay=300);
     
     // Copy characters and close charmap
     //  use CTRL+A if characters are not selected (They are everytime but it can happen)
     void close(int _delay=5,bool _ctrlA=false);
     
-    // Hold GUI + key
+    // Press GUI + key
     void GUI(char _key);
-    // Hold GUI + key
+    // Press GUI + key
     void CTRL(char _key);
     
     void clearClipboard();

@@ -14,7 +14,7 @@ void setup()
   
   // Open charmap.exe and TAB to character field.
   // Set font Agency/Arial, wait for charmap window, wait for run window
-  charmap.open("aaa",700,300);
+  charmap.open("Arial",700,300);
   
   // It will find special characters in string
   // and find them in charmap field.

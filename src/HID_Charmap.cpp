@@ -138,7 +138,7 @@ void HID_Charmap::print(String str, int _delay=0){
     
   }
 }
-void HID_Charmap::open(String _font="aaa",int _windowDelay=700,int _guiDelay=300)
+void HID_Charmap::open(String _font="Arial",int _windowDelay=700,int _guiDelay=300)
 {
     GUI('r');
     delay(_guiDelay);
