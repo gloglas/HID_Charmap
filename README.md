@@ -2,14 +2,14 @@
 Less problems with layouts!
 <!-- WIP don't judge. English is my foreign language -->
 ## Why I did it?
-If you have ever written a script you have experienced problems with different keyboard layouts.
+If you ever have written a duckyscript you have experienced problems with different keyboard layouts.
 It's pain especially on windows where they can be switched (with ALT-SHIFT), but you never know what windows decides to do or how many layouts are there. So I was like hmm... let's use this in powershell
 ```powershell
 Set-WinUserLanguageList -LanguageList en-US -Force
 ```  
 But it has a few problems...
 1. It doesn't work on Windows 7.
-2. You can't write it 'cause of layout problem.
+2. You can't write it because of layout problem.
 3. You will mess up user settings.
 
 Charmap's layout is still same... so we can use that to get special characters that we need to the clipboard and when it's time to use them you just paste the whole clipboard and delete characters that you don't need.
@@ -55,6 +55,6 @@ Print function will go character by character, if the character is in clipboard 
 //Press GUI + key
    void GUI(char _key);
 
-//Press GUI + key
+//Press CTRL + key
    void CTRL(char _key);
 ```
